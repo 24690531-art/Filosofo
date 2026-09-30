@@ -5,6 +5,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tales de Mileto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Tipografías de Google: Cinzel (Estilo Griego) y Merriweather (Lectura pulida) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --greek-gold: #d4af37;
+            --greek-gold-dark: #aa861d;
+            --greek-blue: #0f2b48;
+            --greek-blue-light: #1e4976;
+            --papyrus-bg: #fcfbfa;
+        }
+
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: var(--papyrus-bg);
+            color: #2b2b2b;
+        }
+
+        h1, h2, h3, h4, h5, h6, .font-classic {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Encabezado Decorado */
+        .greek-header {
+            background: linear-gradient(135deg, var(--greek-blue) 0%, #081726 100%);
+            border-bottom: 4px solid var(--greek-gold);
+            position: relative;
+        }
+
+        /* Patrón de Cenefa Griega */
+        .greek-header::after {
+            content: '';
+            display: block;
+            height: 6px;
+            background: repeating-linear-gradient(90deg, var(--greek-gold) 0, var(--greek-gold) 15px, transparent 15px, transparent 25px);
+        }
+
+        .avatar-glow {
+            border: 3px solid var(--greek-gold);
+            box-shadow: 0 0 18px rgba(212, 175, 55, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .avatar-glow:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.7);
+        }
+
+        /* Menú de Navegación */
+ .navbar-top-card {
+            background: #ffffff;
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+
+        .nav-link-greek {
+            text-decoration: none; /* <--- Esta línea elimina el subrayado */
+            color: var(--greek-blue);
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            padding: 12px 18px;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            border: 1px solid transparent;
+        }
+
+        .nav-link-greek:hover {
+            background-color: rgba(212, 175, 55, 0.12);
+            color: var(--greek-gold-dark);
+            border-color: rgba(212, 175, 55, 0.3);
+            transform: translateX(5px);
+        }
+
+        .nav-link-greek.active {
+            background: linear-gradient(135deg, var(--greek-gold) 0%, var(--greek-gold-dark) 100%);
+            color: #ffffff !important;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+        /* Contenido Principal */
+        .main-article {
+            background: #ffffff;
+            border-radius: 18px;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .quote-card {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(30, 73, 118, 0.05) 100%);
+            border-left: 5px solid var(--greek-gold);
+            border-radius: 0 15px 15px 0;
+        }
+
+        .tag-badge {
+            background-color: rgba(15, 43, 72, 0.08);
+            color: var(--greek-blue);
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid rgba(15, 43, 72, 0.2);
+            font-size: 0.85rem;
+        }
+
+        /* Imagen Decorativa */
+        .figure-frame {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .img-greek-style {
+            border-radius: 15px;
+            border: 4px solid #ffffff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.4s ease;
+        }
+
+        .img-greek-style:hover {
+            transform: translateY(-5px);
+        }
+
+        #sombra{
+        width:900px;
+        height:100px;
+        background-color:lightgrey;
+        box-shadow: 10px 10px 5px rgb(209, 216, 6);
+        }
+
+        /* Pie de página */
+        footer {
+            background: var(--greek-blue);
+            color: #d1d5db;
+            border-top: 3px solid var(--greek-gold);
+        }
+    </style>
 </head>
 <body class="bg-light d-flex flex-column min-vh-100">
 
